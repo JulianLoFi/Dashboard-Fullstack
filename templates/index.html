@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>CO2 Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <header class="topbar">
+            <div class="toggle" id="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="contenedor-slider">
+                <p id="texto-slider">1950</p>
+                <input id="slider" type="range" value="1950" min="1851" max="2023" step="1">
+            </div>
+        </header>
+		<aside class="navigation active" id="navigation">
+		
+			<h2>
+				Emisiones de CO2 y cambio climático
+			</h2>
+			<p>
+				Las emisiones de dióxido de carbono son la principal causa del cambio climático global.
+				Existe un amplio consenso en que, para evitar los peores impactos del cambio climático,
+				el mundo necesita reducir urgentemente sus emisiones. Pero la forma en que esta responsabilidad
+				se distribuye entre regiones, países e individuos ha sido un punto de discusión constante en los debates
+				internacionales.
+			</p>
+			<img id="img_1" src="/static/img/climate_day.png">
+			<p>
+				Es nuestro deber concientizar a la población sobre prácticas adecuadas que permitan reducir el impacto de las emisiones de CO2 
+				y contribuir a la protección del medio ambiente. 
+			    Tomar conciencia sobre el impacto de nuestras decisiones es fundamental para construir un futuro más saludable y sostenible, 
+				y garantizar que las nuevas generaciones puedan disfrutar de un planeta habitable.
+			</p>
+		</aside>
+        <main class="main active" id="main">
+            <div class="graficos">
+			<!--================== GRÁFICO LINEAL =======================-->
+				
+				<div class="box" id="box_co2">
+				
+					<figure class="highcharts-figure">
+						<div id="container_line" style="width:92%; height:325px;"></div>
+					</figure>
+				
+				</div>
+				
+			<!--================== GRÁFICO POLAR =======================-->
+				
+                <div class="box" id="box_polar">
+                    <canvas id="polar"></canvas>
+                </div>
+
+            </div>   
+			
+            <div class="graficos">
+			<!--================== GRÁFICO MAPA =======================-->
+			
+                <div class="box" id="mapa">
+					<div id="container" style="width:95%; height:325px;"></div>				
+				</div>
+
+            <!--================= GRÁFICO TABLA =======================-->
+
+                <div class="box" id="box_tabla">
+				  <div id="tabla">
+					  <div class="cardHeader">
+						<h3>Indicador de Tendencia</h3>
+					  </div>
+					  <table>
+						<tbody>
+							<tr class="asia">
+								<td>Asia</td>
+								<td id="asia_t"></td>
+							</tr>
+							<tr class="europe">
+								<td>Europe</td>
+								<td id="europe_t"></td>
+							</tr>
+							<tr class="north_america">
+								<td>North America</td>
+								<td id="n_america_t"></td>
+							</tr>
+							<tr class="world">
+								<td>World</td>
+								<td id="world_t"></td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+                </div>
+            </div>          
+        </main>  
+    </div>
+
+	<!-- ÍCONOS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+	<!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+	
+	<!-- HIGHCHARTS -->
+	<script src="https://cdn.jsdelivr.net/npm/highcharts@13.0.1/highcharts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/highcharts@13.0.1/modules/map.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/highcharts@13.0.1/modules/exporting.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/highcharts@13.0.1/modules/accessibility.js"></script>
+
+
+	<script src="/static/js/main.js"></script>
+
+</body>
+</html>
