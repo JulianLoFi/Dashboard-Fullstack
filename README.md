@@ -7,7 +7,7 @@
 <p>
   Proyecto orientado a representar las Emisiones de Carbono mediante tecnologías Fullstack. El trabajo recorre todo el proceso: 
   
-    ▪️Recolección de datos de un archivo .csv  mediante el uso de la librería pandas. 
+    ▪️Recolección de datos de un archivo .csv mediante el uso de la librería pandas. 
     ▪️Limpieza de valores nulos y filtrado de datos por región.
     ▪️Creación de una API con cada uno de los Endpoints utilizando Flask. 
     ▪️Utilizacion de fetch y funciones asíncronas (async await) para consumir información de la API. 
